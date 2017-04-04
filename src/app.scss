@@ -1,0 +1,118 @@
+$green:  #72d572 !default;
+$red:    #dd3b33 !default;
+$blue:   #00b6f7 !default;
+$gray-dark:                 #292b2c !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url(public/bg.png);
+}
+#app{
+    width:100vw;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    color:$gray-lightest;
+    #nav{
+        width:100%;
+        display: flex;
+        height: 40px;
+        a{
+            flex-grow:1;
+            color:$gray-lightest;
+            text-align: center;
+            line-height: 40px;
+            background: #252528;
+            border-bottom: 2px solid #252528;
+            text-decoration: none;
+            &.router-active{
+                background: transparent;
+                border-bottom:none;
+            }
+        }
+    }
+    #router-view{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        .sign-text{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            text-align: center;
+            flex-grow: 1;
+            flex-shrink: 0;
+            .st-title{
+                margin-bottom: 10px;
+                color: $gray-lighter;
+            }
+            .st-text-normal{
+                color: $gray-lightest;
+            }
+            .st-text-error{
+                color: $red;
+            }
+            .st-text-success{
+                color: $green;
+            }
+        }
+        .ls-app{
+            height: auto;
+            flex-grow: 0;
+            flex-shrink: 0;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 20px;
+            border-top:3px solid $gray-dark;
+            width:100%;
+            justify-content:center;
+            .ls-view{
+                width:320px;
+                height:320px;
+                position: relative;
+            }
+            .ls-view canvas{
+                position: absolute;
+            }
+        }
+        .app-option{
+            margin-top:-20vh;
+            width:100%;
+            td{
+                padding:5px 10px;
+                &.ao-number{
+                    input{
+                        border-radius: 3px;
+                        border:none;
+                        padding:3px 5px;
+                        width:5em;
+                        color:$gray-dark;
+                    }
+                }
+                &.ao-passwd{
+                    .aop-clear{
+                        background: transparent;
+                        border:2px solid $gray-lighter;
+                        color:$gray-lightest;
+                        padding:3px 5px;
+                    }
+                }
+                &:nth-child(1){
+                    text-align: right;
+                    width:50%;
+                }
+                &:nth-child(2){
+                    text-align: left;
+                    width:50%;
+                }
+            }
+        }
+    }
+}

@@ -1,2 +1,168 @@
-# 360homework
-2017å¹´360å‰ç«¯æ˜Ÿè®¡åˆ’ä½œä¸šï¼ˆå·²é€šè¿‡ï¼‰
+# 360homeworks
+
+ÎÞÈÎºÎµÚÈý·½¿âÐ´³ÉµÄ¡°ÊÖÊÆÃÜÂë¡±Ó¦ÓÃ¡£2017Äê360Ç°¶ËÐÇ×÷Òµ£¨ÒÑÍ¨¹ý£©¡£
+
+- Ô­ÉúJsÊµÏÖSPA
+- ÍêÈ«ÃæÏò¶ÔÏóÉè¼Æ
+- MVVM(MVC)½á¹¹
+- Canvas»æÍ¼
+- Nodejs×Ô¶¯¹¹½¨
+
+```text
+    build ¹¹½¨Ä¿Â¼
+    dist  ÊÍ³öÄ¿Â¼
+    src   Ô´ÂëÄ¿Â¼
+```
+
+
+ÏîÄ¿¼«Á¦±ÜÃâwebpackÒÀÀµ£¬Òò´ËÄÄÅÂÎÞÈÎºÎnodejs»ù´¡µÄ³õÑ§ÕßÒ²ÒÀ¾É¿ÉÒÔÇáËÉÔÄ¶ÁÔ´Âë~~
+
+ÏîÄ¿ÖÐ»¹Ê¹ÓÃÁË´óÁ¿ES6Óï·¨£¬Èç¹ûÄãÕýÔÚÑ§Ï°Ëü£¬»òÕßÔÄ¶ÁÏîÄ¿Ô´ÂëÄÜ´ø¸øÄãÐíÐ©ÆôÊ¾¡£
+
+> ±ÜÃâwebpackÒâÎ¶×Å£ºÄã¿ÉÒÔÖ±½ÓË«»÷´ò¿ª`src`Ô´ÂëÄ¿Â¼µÄ`index.html`À´ÔËÐÐÏîÄ¿£¡
+
+> `dist/index.html`¼æÈÝÐÔÁ¼ºÃ£¬¼æÈÝ¸÷ÖÖÒÆ¶¯/PC¶Ëä¯ÀÀÆ÷£¬µ«`src/index.html`¼æÈÝÐÔ½Ï²î£¬Ö»ÓÐ×îÐÂµÄChromeºÍFirefoxä¯ÀÀÆ÷²Å¿ÉÒÔÔËÐÐËü
+
+## ÏîÄ¿²¿Êð
+
+Êµ¼ÊÉÏ£¬Èç¹ûÄã²»´òËãÐÞ¸ÄÏîÄ¿²¢ÖØÐÂ±àÒëËü£¬Ö»ÊÇÏë¼òµ¥µÄÔËÐÐ£¬ÄÇÃ´**Ö±½ÓË«»÷´ò¿ª**`dist`»ò`src`Ä¿Â¼µÄ`index.html`¼´¿É£¬ÎÞÐèÈÎºÎ¶îÍâµÄ²Ù×÷£¡
+
+µ±È»£¬Èç¹ûÄãÏëÐÞ¸Ä±àÒëÏîÄ¿£¬ÄÇÃ´ÄãÐèÒªÊ×ÏÈ°²×°ÏîÄ¿ÒÀÀµ°ü
+
+```
+    npm install
+```
+
+È»ºó½øÈë`src`Ä¿Â¼ÐÞ¸ÄÏîÄ¿Ô´Âë£¬¸Ä¶¯Íê±ÏºóÔËÐÐ
+
+```
+    npm run build
+```
+
+Nodejs»á×Ô¶¯½«srcÏîÄ¿ÎÄ¼þ´ò°ü£¬¸üÐÂdistÄ¿Â¼ÎÄ¼þ
+
+> distÄ¿Â¼ÖÐÎÄ¼þ²¢²»ÊÇÈ«²¿¶¼ÊÇÊ¹ÓÃnodejs±àÒëÉú³ÉµÄ£¬ËùÒÔÇë²»ÒªÉ¾³ýÕû¸ödistÄ¿Â¼
+
+±àÒëÍê³Éºó£¬Ö±½ÓË«»÷´ò¿ª`dist`Ä¿Â¼ÖÐµÄ`index.html`¼´¿É¡£
+
+ÖµµÃÒ»ÌáµÄÊÇ£¬ÓÉÓÚÏîÄ¿¼«Á¦±ÜÃâwebpackÒÀÀµ£¬ÄÄÅÂÊÇ`src`Ô´ÂëÄ¿Â¼£¬Äã¿ÉÒÔÖ±½ÓË«»÷`index.html`ÔËÐÐ£¡
+
+## ¹¦ÄÜ½éÉÜ
+
+### Â¼ÈëÊÖÊÆÃÜÂë
+
+µã»÷Ò³ÃæÉÏ·½`ÉèÖÃÃÜÂë`±êÇ©»ò½øÈë`URL/!#/set`½øÈëÂ¼ÈëÊÖÊÆÃÜÂëÒ³Ãæ¡£
+
+µ±»æÖÆÖÁÉÙ5¸öµãºó£¬½øÈë`ensure`×´Ì¬£¬ÐèÒªÔÙÂ¼ÈëÒ»±éÏàÍ¬µÄÃÜÂëÈ·±£²»»áÒòÎªÊÖÎóÔì³ÉÎÊÌâ¡£
+
+ÈôµÚ¶þ´ÎÂ¼ÈëÓëµÚÒ»´Î²»Ò»ÖÂ£¬ÍË»Ø×î³õµÄÂ¼Èë×´Ì¬£»ÈôÓëµÚÒ»´ÎÒ»ÖÂÔò½«ÃÜÂë´æ´¢ÔÚ±¾µØlocalStorageÖÐ
+
+### ÑéÖ¤ÊÖÊÆÃÜÂë
+
+µã»÷Ò³ÃæÉÏ·½`ÑéÖ¤ÃÜÂë`±êÇ©»ò½øÈë`URL/!#/verify`½øÈëÑéÖ¤ÊÖÊÆÃÜÂëÒ³Ãæ¡£
+
+### ¸Ä±äµãÊý
+
+µã»÷Ò³ÃæÉÏ·½`¹ÜÀí`±êÇ©»ò½øÈë`URL/!#/option`½øÈë¹ÜÀíÒ³Ãæ£¬ÔÚµãÊýÎÄ±¾¿òÖÐ¿ÉÒÔÉèÖÃÊÖÊÆÃÜÂëÊ¹ÓÃµÄµãÊý
+
+ÏîÄ¿Ä¬ÈÏÊ¹ÓÃ3*3µÄµãÊý½øÐÐÊÖÊÆÃÜÂëµÄ²¶»ñ¡£
+
+> ¸Ã¹¦ÄÜ²»»áÓ°Ïì¡°ÑéÖ¤ÊÖÊÆÃÜÂë¡±¹¦ÄÜ
+
+### ²é¿´/Çå³ýÊÖÊÆÃÜÂë
+
+µã»÷Ò³ÃæÉÏ·½`¹ÜÀí`±êÇ©»ò½øÈë`URL/!#/option`½øÈë¹ÜÀíÒ³Ãæ£¬ÔÚ¡°´æ´¢µÄÃÜÂë¡±ÖÐ¿ÉÒÔ²é¿´µ±Ç°´æ´¢µÄÊÖÊÆÃÜÂë¡£
+
+ÃÜÂëÒÔ`-`·Ö¸î£¬Êý×Ö´ú±íµãµÄÐòºÅ£¬ÐòºÅ**´Ó0**¿ªÊ¼¡£
+
+µã»÷¡°Çå³ý¡±°´Å¥¿ÉÒÔÇå³ý±£´æµÄÃÜÂë¡£
+
+## ¹¹½¨¼¼Êõ¿´µã
+
+### Ä£¿é»¯Éè¼Æ
+
+ÏîÄ¿²ÉÓÃÍêÈ«ÃæÏò¶ÔÏóµÄÄ£¿é»¯£¬¼«Á¦±ÜÃâÄ£¿éÖ®¼äµÄñîºÏ¶È¡£
+
+```
+    LsPoint         Ò»¸öµã
+    LsPointManager  Ò»¸öµã¹ÜÀíÆ÷
+    LsView          Ò»¸öÕ¹°å£¬°üÀ¨µãºÍÏß
+    LsApp           Ò»¸öÊÖÊÆÃÜÂë²¶»ñÓ¦ÓÃ
+```
+
+ñîºÏ¶È¼«µÍµÄÄ£¿é²»½öÒâÎ¶×Å¿ÉÊ®·ÖÁ¼ºÃµÄÎ¬»¤ÐÔ£¬»¹ÒâÎ¶×ÅÊµÏÖÒ»Ð©Ê®·ÖÁé»îµÄ¹¦ÄÜ»á·Ç³£¼òµ¥£¬»òÕßËµÊÇÀíËùµ±È»¡£
+
+> ±ÈÈç£ºÄã¿ÉÒÔÔÚ¹ÜÀíÒ³ÃæÖÐ¸ü¸ÄÊÖÊÆÃÜÂëÂ¼ÈëµÄ×ÜµãÊý¡£
+
+### MVVM(MVC)µÄ½á¹¹Éè¼Æ
+
+ÏîÄ¿ÕûÌåÊµ¼ÊÉÏÊÇÒ»¸öSPA£¬¹¹½¨·ç¸ñÊÜVue.jsÓ°Ïì½Ï´ó¡£
+
+```
+    URL/#!/set      ÃÜÂëÂ¼Èë
+    URL/#!/verify   ÑéÖ¤ÃÜÂë
+    URL/#!/option   ¹ÜÀíÑ¡Ïî
+```
+
+ÓÉÓÚÊµÏÖMVVM×Ô¶¯Êý¾Ý°ó¶¨³É±¾½Ï´ó£¬Òò´ËÏîÄ¿µÄ½á¹¹·ç¸ñÊÇÀàËÆÓÚMVVMµÄMVCÀ´±ÜÃâÊ¹ÓÃÊý¾Ý°ó¶¨¡£¿ÉÒÔ¿´µ½Â·ÓÉ£¨Controller£©²¿·Ö·Ç³£ºñ£¬ËùÓÐµÄÒµÎñÂß¼­¶¼·ÅÔÚÄÇÀï¡£
+
+ÊÜVue.js·ç¸ñÓ°Ïì£¬ÏîÄ¿ÓµÓÐ½¡È«µÄÂ·ÓÉÆ÷ºÍÂ·ÓÉ±í£¬Ê¹ÓÃHash½øÐÐSPAÂ·ÓÉ¡£
+
+### ×é¼þ»¯Éè¼Æ
+
+ÏîÄ¿Ê¹ÓÃ×é¼þ»¯Éè¼Æ£¬Òò´ËÄã¿ÉÒÔ¿´µ½ÏîÄ¿HTMLÎÄ¼þ`body`ÔªËØÖÐÖ»ÓÐÒ»¸ö¹ÒÔØµã
+
+```html
+    <body>
+        <div id="app"></div>
+    </body>
+```
+
+È»ºóÍ¨¹ýjs¹ÒÔØÔªËØ
+
+```javascript
+    new App({
+        el:'#app'
+    });
+```
+
+ÏîÄ¿Ê¹ÓÃµÄ×é¼þÊ÷ÈçÏÂ
+
+```
+    App ¸ù×é¼þ
+      LsApp ²¶»ñÊÖÊÆÃÜÂë×é¼þ
+      Option ¹ÜÀíÑ¡Ïî×é¼þ
+```
+
+### ×Ô¶¯¹¹½¨
+
+ÏîÄ¿Ê¹ÓÃNodejs½øÐÐ¹¹½¨£¬Ê¹ÓÃNodejs¿ÉÒÔºÜÇáËÉµÄ×öµ½£º
+
+- JsÎÄ¼þ´ò°ü
+- Babel×ªÂë
+- JsÑ¹Ëõ
+- SCSS±àÒë
+- CSSÑ¹Ëõ
+
+Äã¿ÉÒÔÊ¹ÓÃ`npm run build`»òÖ±½ÓÔËÐÐ`build/build-dist.js`¹¹½¨Ä¿Â¼
+
+## Ò»Ð©ÍÂ²Û
+
+ËµÊµ»°£¬¿´µ½Õâ¸ö×÷ÒµÎÒµÄÄÚÐÄ¼¸ºõÊÇ±ÀÀ£µÄ¡£ÒòÎª£¬ÎÒÍêÈ«Ã»½Ó´¥¹ýCanvas»æÍ¼......
+
+¿¼ÂÇ¹ýÓÃdivÀ´Ð´£¬µ«ÊÇÄÇÑùÊµÔÚÌ«......×ÜÖ®¾ÍÊÇÓÐÖÖËµ²»³öÀ´µÄ±ðÅ¤£¬ËùÒÔ×îºó¾ö¶¨ÏÖÑ§Ò»ÏÂCanvas»æÍ¼£¬½á¹ûÒâÍâµÄ·¢ÏÖCanvas»æÍ¼ÆäÊµ²»ÄÑ¡£
+
+´ÓÄÃµ½ÊÖµ½Ð´Íê£¬´ó¸ÅÓÃÁË4ÌìµÄÊ±¼ä¡£
+
+±¾À´Ò»¿ªÊ¼Ö»ÊÇ´òËã¼òµ¥µÄÊ¹ÓÃÃæÏò¹ý³ÌµÄÐ´·¨ÊµÏÖ¾Í¿ÉÒÔÁË¡£¿ÉÄÜÊÇVueÐ´¶àÁËµÄÔ­Òò£¬Ð´×ÅÐ´×Å¾Í°ÑÏîÄ¿Ð´³ÉÁËMVVM·ç¸ñµÄSPA£¬µ«ÊÇÃ»ÓÐVueÇ¿´óµÄÊý¾Ý°ó¶¨ºÍ×é¼þäÖÈ¾£¬¸üÃ»ÓÐÂ·ÓÉ£¬ÓÖ²»ÏëÓÃµÚÈý·½¿â£¬Ò»ÇÐ¶¼Òª×Ô¼ºÊµÏÖ......
+
+ÓÉÓÚÒ»¿ªÊ¼²»´òËãÊ¹ÓÃÈÎºÎµÚÈý·½¿â£¬ËùÒÔ¾ÍÃ»´òËã¹ýÉÏwebpack¡£½á¹û×îºóÕæ»úµ÷ÊÔµÄÊ±ºò·¢ÏÖÒÆ¶¯¶Ë¶ÔES6µÄÖ§³ÖÊ®·ÖÁîÈË×½¼±£¬ËùÒÔÁÙÊ±°ÑÏîÄ¿²ð³ÉsrcºÍdist£¬distÓÃbabel×ªÂëÒÔ±£Ö¤¼æÈÝÐÔ¡£
+
+ËùÒÔ½á¹û¾ÍÊÇÏÖÔÚÕâÑù£¬Ò»¸ö¼òµ¥µÄÊÖÊÆÃÜÂëÐ´³ÉÁËÒ»¸öÓ¦ÓÃ£¬¹âJs´úÂë¾Í½ü600+ÐÐ¡£
+
+## ¿ªÔ´Ð­Òé
+
+MIT
+
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "360homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "null",
+  "scripts": {
+    "build": "node build/build-dist.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pea3nut",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "clean-css": "^4.0.10",
+    "fs-extra": "^2.1.2",
+    "node-sass": "4.5.0",
+    "uglify-js": "^2.8.16"
+  }
+}
